@@ -192,7 +192,7 @@ export const useContractsStore = defineStore('contracts', () => {
         ...contracts.value[index],
         ...data,
         updatedAt: new Date()
-      }
+      } as Contract
 
       return contracts.value[index]
     } finally {
@@ -213,7 +213,7 @@ export const useContractsStore = defineStore('contracts', () => {
         status: 'submitted',
         submittedAt: new Date(),
         updatedAt: new Date()
-      }
+      } as Contract
 
       return contracts.value[index]
     } finally {
@@ -235,7 +235,7 @@ export const useContractsStore = defineStore('contracts', () => {
         adminComment: comment,
         approvedAt: new Date(),
         updatedAt: new Date()
-      }
+      } as Contract
 
       return contracts.value[index]
     } finally {
@@ -256,7 +256,7 @@ export const useContractsStore = defineStore('contracts', () => {
         status: 'rejected',
         rejectionReason: reason,
         updatedAt: new Date()
-      }
+      } as Contract
 
       return contracts.value[index]
     } finally {
